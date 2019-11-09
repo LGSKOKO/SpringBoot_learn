@@ -2,15 +2,15 @@
 
 ## 目录
 
-1. ##### Spring Boot 简介
+1. #### Spring Boot 简介
 
-2. ##### 单体应用与微服务
+2. #### 单体应用与微服务
 
-4. ##### Spring Boot HelloWorld
+4. #### Spring Boot HelloWorld
 
-5. ##### Hello World探究
+5. #### Hello World探究
 
-6. ##### 使用Spring Initializer快速创建Spring Boot项目
+6. #### 使用Spring Initializer快速创建Spring Boot项目
 
 ------
 
@@ -110,8 +110,6 @@
    }
    ```
 
-   
-
 4. #### 编写相关的Controller、Service类
 
    ```java
@@ -131,6 +129,22 @@
 ## Hello World探究
 
 ### 1、POM文件
+
+- **Spring Boot为我们提供了简化企业级开发绝大多数场景的starter pom（启动** 
+
+  **器），只要引入了相应场景的starter pom，相关技术的绝大部分配置将会消** 
+
+  **除（自动配置），从而简化我们开发。业务中我们就会使用到Spring Boot为** 
+
+  **我们自动配置的bean**
+
+- **参考 https://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#using-boot-starter** 
+
+- **这些starters几乎涵盖了javaee所有常用场景，Spring Boot对这些场景依赖的** 
+
+  **jar也做了严格的测试与版本控制。我们不必担心jar版本合适度问题。**
+
+- **spring-boot-dependencies里面定义了jar包的版本**
 
 #### 1、父项目
 
@@ -165,17 +179,37 @@ Spring Boot的版本仲裁中心；
 </dependency>
 ```
 
-**spring-boot-starter**-==web==：
+**spring-boot-starter**-web：
 
-​	spring-boot-starter：spring-boot场景启动器；帮我们导入了web模块正常运行所依赖的组件；
+​	spring-boot-starter：**spring-boot场景启动器**；帮我们导入了**web模块**正常运行所依赖的组件；
 
-
-
-Spring Boot将所有的功能场景都抽取出来，做成一个个的starters（启动器），只需要在项目里面引入这些starter相关场景的所有依赖都会导入进来。要用什么功能就导入什么场景的启动器
+​	Spring Boot将所有的功能场景都抽取出来，做成一个个的starters（启动器），只需要在项目里面引入这些starter相关场景的所有依赖都会导入进来。要用什么功能就导入什么场景的启动器
 
 
 
 ### 2、主程序类，主入口类
+
+- #### 程序从main方法开始运行 
+
+- #### 使用SpringApplication.run()加载主程序类 
+
+- #### 主程序类需要标注 @SpringBootApplication 
+
+- ####  @EnableAutoConfiguration是核心
+
+- #### @Import导入所有的自动配置场景 
+
+- #### @AutoConfigurationPackage定义 默认的包扫描规则 
+
+- #### 程序启动扫描加载主程序类所在的包 以及下面所有子包的组件；
+
+  
+
+- @Import导入所有的自动配置场景 
+
+  3、
+
+  4、 
 
 ```java
 /**
@@ -266,8 +300,8 @@ IDE都支持使用Spring的项目创建向导快速创建一个Spring Boot项目
 
 默认生成的Spring Boot项目；
 
-- 主程序已经生成好了，我们只需要我们自己的逻辑
-- resources文件夹中目录结构
-  - static：保存所有的静态资源； js css  images；
-  - templates：保存所有的模板页面；（Spring Boot默认jar包使用嵌入式的Tomcat，默认不支持JSP页面）；可以使用模板引擎（freemarker、thymeleaf）；
-  - application.properties：Spring Boot应用的配置文件；可以修改一些默认设置；
+- **主程序已经生成好了，我们只需要我们自己的逻辑**
+- **resources文件夹中目录结构**
+  - **static：保存所有的静态资源； js css  images；**
+  - **templates：保存所有的模板页面**；（Spring Boot默认jar包使用嵌入式的Tomcat，默认不支持JSP页面）；可以使用模板引擎（freemarker、thymeleaf）；
+  - **application.properties：Spring Boot应用的配置文件**；可以修改一些默认设置；
