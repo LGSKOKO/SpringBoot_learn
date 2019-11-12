@@ -32,9 +32,9 @@
 
 - #### 简介
 
-  ​    **Spring Boot来简化Spring应用开发，约定大于配置，** 
-
-  **去繁从简，很简单几步就能创建一个独立的，产品级别的应用**  ![图片](https://raw.github.com/LGSKOKO/SpringBoot_learn/master/01SpringBoot核心技术/images/1.png)
+  ​    **Spring Boot来简化Spring应用开发，约定大于配置，去繁从简，很简单几步就能创建一个独立的，产品级别的应用** 
+  
+  ![图片](https://raw.github.com/LGSKOKO/SpringBoot_learn/master/01SpringBoot核心技术/images/1.png)
 
 - #### 优点
 
@@ -58,12 +58,14 @@
 - #### 单体应用
 
   ​	正如我们平常所开发的小型项目一样，所有的模块与功能都集成在一个项目中（ALL IN ONE），但随着业务的不断发展单体应用会越来越庞大；若是为了达到高并发的效果可能是将该单体项目在多台主机上运行，然后使用nigx等来进行负载均衡操作。
+  
   ![图片](https://raw.github.com/LGSKOKO/SpringBoot_learn/master/01SpringBoot核心技术/images/2.png)
 
 
 - #### 微服务
 
     每一个功能元素最终都是一个可独立替换和独立升级的软件单元；可以根据项目需求利用每个独立的单元模块进行整合。
+    
      ![图片](https://raw.github.com/LGSKOKO/SpringBoot_learn/master/01SpringBoot核心技术/images/3.png)
 
 ------
