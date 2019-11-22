@@ -66,7 +66,7 @@ public class HelloWorld {
 
 **图示：**
 
-
+![图片](https://raw.github.com/LGSKOKO/SpringBoot_learn/master/01SpringBoot核心技术/images/4.png)
 
 每一个日志的实现框架都有自己的配置文件。使用slf4j以后，**配置文件还是做成日志实现框架自己本身的配置文件；**
 
@@ -78,7 +78,7 @@ a（slf4j+logback）: Spring（commons-logging）、Hibernate（jboss-logging）
 
 **图示：**
 
-
+![图片](https://raw.github.com/LGSKOKO/SpringBoot_learn/master/01SpringBoot核心技术/images/5.png)
 
 **如何让系统中所有的日志都统一到slf4j；**
 
@@ -103,6 +103,8 @@ SpringBoot使用它来做日志功能；
 
 底层依赖关系
 
+![图片](https://raw.github.com/LGSKOKO/SpringBoot_learn/master/01SpringBoot核心技术/images/6.jpg)
+
 **总结：**
 
 ​	1）、SpringBoot底层也是使用slf4j+logback的方式进行日志记录
@@ -120,7 +122,9 @@ public abstract class LogFactory {
     static LogFactory logFactory = new SLF4JLogFactory();
 ```
 
-​	4）、如果我们要引入其他框架？一定要把这个框架的默认日志依赖移除掉？
+​	![图片](https://raw.github.com/LGSKOKO/SpringBoot_learn/master/01SpringBoot核心技术/images/7.png)
+
+4）、如果我们要引入其他框架？一定要把这个框架的默认日志依赖移除掉？
 
 ​			Spring框架用的是commons-logging；
 
