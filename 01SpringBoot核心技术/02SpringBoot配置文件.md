@@ -36,9 +36,11 @@ SpringBoot使用全局配置文件，配置文件名时固定的；
 
 YAML（YAML Ain't Markup Language）
 
-​	YAML  A Markup Language：是一个标记语言
+- YAML  A Markup Language：是一个标记语言
 
-​	YAML   isn't Markup Language：不是一个标记语言；
+
+- YAML   isn't Markup Language：不是一个标记语言；
+
 
 
 
@@ -55,7 +57,7 @@ server:
   port: 8081
 ```
 
- 	**XML：配置例子**
+   **XML：配置例子**
 
 ```xml
 <server>
@@ -93,8 +95,6 @@ server:
 
 **属性和值也是大小写敏感；**
 
-
-
 ### 2、值的写法
 
 #### YAML支持三种数据结构：
@@ -105,23 +105,21 @@ server:
 
 **–  数组：一组按次序排列的值** 
 
-
-
 #### 字面量：普通的值（数字，字符串，布尔）
 
-​	**k: v：字面直接来写；**
+- **k: v：字面直接来写；**
 
-​		字符串默认不用加上单引号或者双引号；
+- **	字符串默认不用加上单引号或者双引号；**
 
-​		""：双引号；不会转义字符串里面的特殊字符；特殊字符会作为本身想表示的意思
+  - ​	""：双引号；不会转义字符串里面的特殊字符；特殊字符会作为本身想表示的意思
 
-​				name:   "zhangsan \n lisi"：输出；zhangsan 换行  lisi
+    ​    name:   "zhangsan \n lisi"：输出；zhangsan 换行  lisi
 
-​		''：单引号；会转义特殊字符，特殊字符最终只是一个普通的字符串数据
+  - ''：单引号；会转义特殊字符，特殊字符最终只是一个普通的字符串数据
 
-​				name:   ‘zhangsan \n lisi’：输出；zhangsan \n  lisi
+    ​				name:   ‘zhangsan \n lisi’：输出；zhangsan \n  lisi
 
-
+​	
 
 #### 对象、Map（属性和值）（键值对）:
 
@@ -131,8 +129,8 @@ k: v，**在下一行来写对象的属性和值的关系；注意缩进**
 
 ```yaml
 friends:
-		lastName: zhangsan
-		age: 20
+	lastName: zhangsan
+	age: 20
 ```
 
 **行内写法**：
@@ -185,7 +183,7 @@ person.dog.age=15
 
 ------
 
-
+ 
 
 ## <a id="3"> 配置文件的注入</a>
 
@@ -413,8 +411,6 @@ person.dog.age=15
 ```
 
 ------
-
-
 
 ## <a id="5">Profile</a>
 
